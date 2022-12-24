@@ -37,36 +37,6 @@
 "type": "prompt"
 },
 {
-"alignment": "right",
-"segments": [
-{
-"background": "#303030",
-"foreground": "#3C873A",
-"leading_diamond": " ",
-"properties": {
-"fetch_package_manager": true,
-"npm_icon": " <#cc3a3a></> ",
-"yarn_icon": " <#348cba></>"
-},
-"style": "diamond",
-"template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-"trailing_diamond": "",
-"type": "node"
-},
-{
-"background": "#40c4ff",
-"foreground": "#ffffff",
-"invert_powerline": true,
-"leading_diamond": " ",
-"style": "diamond",
-"template": "  {{ .CurrentDate | date .Format }} ",
-"trailing_diamond": "",
-"type": "time"
-}
-],
-"type": "prompt"
-},
-{
 "alignment": "left",
 "newline": true,
 "segments": [
