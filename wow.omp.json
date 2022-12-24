@@ -7,7 +7,7 @@
           {
             "background": "#000000",
             "foreground": "#ffffff",
-            "style": "plain",
+            "style": "diamond",
             "type": "session"
           },
           {
