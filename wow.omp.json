@@ -1,31 +1,96 @@
 {
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-    "blocks": [
-      {
-        "alignment": "left",
-        "segments": [
-          {
-            "background": "#000000",
-            "foreground": "#ffffff",
-            "style": "diamond",
-            "type": "session"
-          },
-          {
-            "background": "#1478DB",
-            "foreground": "#000000",
-            "leading_diamond": "\ue0b6",
-            "trailing_diamond": "\uE0B0",
-            "properties": {
-              "style": "full"
-            },
-            "style": "diamond",
-            "template": "{{ .Path }} ",
-            "type": "path"
-          }
-        ],
-        "type": "prompt"
-      }
-    ],
-    "final_space": true,
-    "version": 2
-  }
+"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+"blocks": [
+{
+"alignment": "left",
+"segments": [
+{
+"background": "#0077c2",
+"foreground": "#ffffff",
+"leading_diamond": "╭─",
+"style": "diamond",
+"template": " {{ .Name }} ",
+"type": "shell"
+},
+{
+"background": "#ef5350",
+"foreground": "#FFFB38",
+"properties": {
+"root_icon": ""
+},
+"style": "diamond",
+"template": "<parentBackground></>  ",
+"type": "root"
+},
+{
+"background": "#444444",
+"foreground": "#E4E4E4",
+"powerline_symbol": "",
+"properties": {
+"style": "full"
+},
+"style": "powerline",
+"template": " {{ .Path }} ",
+"type": "path"
+}
+],
+"type": "prompt"
+},
+{
+"alignment": "right",
+"segments": [
+{
+"background": "#303030",
+"foreground": "#3C873A",
+"leading_diamond": " ",
+"properties": {
+"fetch_package_manager": true,
+"npm_icon": " <#cc3a3a></> ",
+"yarn_icon": " <#348cba></>"
+},
+"style": "diamond",
+"template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+"trailing_diamond": "",
+"type": "node"
+},
+{
+"background": "#40c4ff",
+"foreground": "#ffffff",
+"invert_powerline": true,
+"leading_diamond": " ",
+"style": "diamond",
+"template": "  {{ .CurrentDate | date .Format }} ",
+"trailing_diamond": "",
+"type": "time"
+}
+],
+"type": "prompt"
+},
+{
+"alignment": "left",
+"newline": true,
+"segments": [
+{
+"foreground": "#21c7c7",
+"style": "plain",
+"template": "╰─",
+"type": "text"
+},
+{
+"foreground": "#e0f8ff",
+"foreground_templates": [
+"{{ if gt .Code 0 }}#ef5350{{ end }}"
+],
+"properties": {
+"always_enabled": true
+},
+"style": "plain",
+"template": "❯ ",
+"type": "exit"
+}
+],
+"type": "prompt"
+}
+],
+"version": 2
+}
