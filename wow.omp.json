@@ -7,9 +7,8 @@
 {
 "background": "#0077c2",
 "foreground": "#ffffff",
-"leading_diamond": "╭─",
 "style": "diamond",
-"template": " {{ .Name }} ",
+"template": " {{ .UserName }} ",
 "type": "shell"
 },
 {
@@ -37,5 +36,6 @@
 "type": "prompt"
 }
 ],
+"final_space": true,
 "version": 2
 }
